@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theam_color"
+    tools:context=".activity.InsertNotesActivity">
+
+    <EditText
+        android:id="@+id/up_edit_note_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:hint="Title..."
+        android:padding="15dp"
+        android:background="@drawable/edit_text_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/up_edit_note_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:hint="Sub Title..."
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp"
+        android:background="@drawable/edit_text_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/up_edit_note_title" />
+
+    <LinearLayout
+        android:id="@+id/up_priority_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="15dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/up_edit_note_subtitle" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Priority"
+            android:fontFamily="@font/ubuntu_regular"
+            android:layout_margin="10dp"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:id="@+id/up_green_priority"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/green_shape"
+            android:src="@drawable/ic_baseline_check_24"
+            android:tint="@color/black"
+            android:padding="5dp"
+            android:layout_margin="5dp"/>
+
+        <ImageView
+            android:id="@+id/up_yello_priority"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/yello_shape"
+            android:tint="@color/black"
+            android:padding="5dp"
+            android:layout_margin="5dp"/>
+
+        <ImageView
+            android:id="@+id/up_red_priority"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/red_shape"
+            android:tint="@color/black"
+            android:padding="5dp"
+            android:layout_margin="5dp"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/up_edit_note"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="15dp"
+        android:hint="Title..."
+        android:padding="15dp"
+        android:gravity="start"
+        android:background="@drawable/edit_text_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/up_priority_layout" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/up_done_note_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="26dp"
+        android:src="@drawable/ic_baseline_check_24"
+        app:backgroundTint="@color/yello"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
